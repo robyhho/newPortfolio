@@ -1,5 +1,5 @@
 import MainButton from "./components/mainButton";
-
+import WindowsModal from "./components/windowsModal";
 export default function Home() {
   return (
     <main
@@ -12,14 +12,14 @@ export default function Home() {
     >
       <h1>Hello, I'm Robbie</h1>
       <h2>Front End Engineer</h2>
+      <WindowsModal />
       <section className="grid grid-cols-3 gap-3 justify-items-center items-center">
-        <MainButton />
-        <div className="size-[100px] bg-gray-500"></div>
-        <div className="size-[100px] bg-gray-500"></div>
-        <div className="size-[100px] bg-gray-500"></div>
-        <div className="size-[100px] bg-gray-500"></div>
-        <div className="size-[100px] bg-gray-500"></div>
-        <div className="size-[100px] bg-gray-500"></div>
+        <MainButton btnTitle="About" btnImg="about" />
+        <MainButton btnTitle="Work" btnImg="work" />
+        <MainButton btnTitle="FAQ" btnImg="faq" />
+        <MainButton btnTitle="Ahri" btnImg="shiba" />
+        <MainButton btnTitle="Links" btnImg="links" />
+        <MainButton btnTitle="Contact" btnImg="email" />
       </section>
     </main>
   );
