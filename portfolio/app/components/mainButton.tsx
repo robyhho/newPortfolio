@@ -1,6 +1,8 @@
 import React from "react";
 
-const MainButton = ({ btnTitle, btnImg }) => {
+type props = { btnTitle: String; btnImg?: String };
+
+const MainButton = ({ btnTitle, btnImg }: props) => {
   return (
     <div className="flex flex-col justify-center items-center">
       <img src={`/${btnImg}Icon.svg`} alt="" />

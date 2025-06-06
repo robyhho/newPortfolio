@@ -1,4 +1,9 @@
-import React from "react";
+import { MouseEventHandler } from "react";
+
+type props = {
+  color?: "red" | "yellow" | "green";
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+};
 
 const colorMap = {
   red: "bg-red-500 hover:bg-red-600 active:bg-red-700",
@@ -11,13 +16,12 @@ const labelMap = {
   green: "placeholder",
 };
 
-const WindowsBtn = ({ color = "red", onClick }) => {
-  console.log("WindowsBtn color:", color);
+const WindowsBtn = ({ color = "red", onClick }: props) => {
   const colorClasses = colorMap[color];
   return (
     <button
       onClick={onClick}
-      className={`h-4 w-4 rounded-full  shadow-inner ${colorClasses}`}
+      className={`h-2 w-2 rounded-full  shadow-inner ${colorClasses}`}
       aria-label={`${labelMap[color]}`}
     />
   );
